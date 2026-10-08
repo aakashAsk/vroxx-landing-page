@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vroxx — AI fitness coach for Android</title>
+  <meta name="description" content="Vroxx is an AI fitness and nutrition coach for Android that learns from your own logged data: workouts, meals, water, steps, sleep and schedule in one app.">
+  <meta name="theme-color" content="#0B0D17">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='10' fill='%23161B33'/%3E%3Cpath d='M17 6c1 4 6 6.5 6 12.5a6 6 0 0 1-12 0c0-3 1.6-4.8 3-6 .2 2 1 3.2 2.2 3.6C15.6 12.5 16 9 17 6z' fill='%23FF6433'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="#top" class="logo">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <rect width="34" height="34" rx="10" fill="#161B33"/>
+          <path class="a-flame" d="M17 6c1 4 6 6.5 6 12.5a6 6 0 0 1-12 0c0-3 1.6-4.8 3-6 .2 2 1 3.2 2.2 3.6C15.6 12.5 16 9 17 6z" style="fill:var(--accent)"/>
+          <path d="M17 18c.6 1.6 2.6 2.4 2.6 4.4a2.6 2.6 0 0 1-5.2 0c0-1.4 1.4-2.6 2.6-4.4z" fill="#FFD2C2"/>
+        </svg>
+        <span>Vroxx</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#targets">Smart targets</a>
+        <a href="#how">How it works</a>
+        <a href="#reminders">Reminders</a>
+      </div>
+      <a class="btn btn-accent btn-small" href="#get">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Get the app
+      </a>
+    </nav>
+  </header>
+
+  <main>
+  <!-- ========== HERO ========== -->
+  <section id="top" class="hero">
+    <svg class="hero-bg" aria-hidden="true" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="vxGrid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#2A3160"/></pattern>
+        <radialGradient id="vxGridFade" cx="62%" cy="45%" r="55%"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+        <mask id="vxGridMask"><rect width="1440" height="720" fill="url(#vxGridFade)"/></mask>
+      </defs>
+      <rect width="1440" height="720" fill="url(#vxGrid)" mask="url(#vxGridMask)"/>
+      <circle class="a-ember" cx="80" cy="470" r="1.5" style="fill:var(--accent);animation-duration:6.0s;animation-delay:-0.0s"/>
+      <circle class="a-ember" cx="343" cy="567" r="2.3" style="fill:var(--primary);animation-duration:7.7s;animation-delay:-1.3s"/>
+      <circle class="a-ember" cx="606" cy="664" r="3.1" fill="#FFD2C2" style="animation-duration:9.4s;animation-delay:-2.6s"/>
+      <circle class="a-ember" cx="869" cy="531" r="3.9" style="fill:var(--accent);animation-duration:6.1s;animation-delay:-3.9s"/>
+      <circle class="a-ember" cx="1132" cy="628" r="1.5" style="fill:var(--primary);animation-duration:7.8s;animation-delay:-5.2s"/>
+      <circle class="a-ember" cx="1395" cy="495" r="2.3" fill="#FFD2C2" style="animation-duration:9.5s;animation-delay:-6.5s"/>
+      <circle class="a-ember" cx="218" cy="592" r="3.1" style="fill:var(--accent);animation-duration:6.2s;animation-delay:-7.8s"/>
+      <circle class="a-ember" cx="481" cy="689" r="3.9" style="fill:var(--primary);animation-duration:7.9s;animation-delay:-1.1s"/>
+      <circle class="a-ember" cx="744" cy="556" r="1.5" fill="#FFD2C2" style="animation-duration:9.6s;animation-delay:-2.4s"/>
+      <circle class="a-ember" cx="1007" cy="653" r="2.3" style="fill:var(--accent);animation-duration:6.3s;animation-delay:-3.7s"/>
+      <circle class="a-ember" cx="1270" cy="520" r="3.1" style="fill:var(--primary);animation-duration:8.0s;animation-delay:-5.0s"/>
+      <circle class="a-ember" cx="93" cy="617" r="3.9" fill="#FFD2C2" style="animation-duration:9.7s;animation-delay:-6.3s"/>
+      <circle class="a-ember" cx="356" cy="484" r="1.5" style="fill:var(--accent);animation-duration:6.4s;animation-delay:-7.6s"/>
+      <circle class="a-ember" cx="619" cy="581" r="2.3" style="fill:var(--primary);animation-duration:8.1s;animation-delay:-0.9s"/>
+      <circle class="a-ember" cx="882" cy="678" r="3.1" fill="#FFD2C2" style="animation-duration:9.8s;animation-delay:-2.2s"/>
+      <circle class="a-ember" cx="1145" cy="545" r="3.9" style="fill:var(--accent);animation-duration:6.5s;animation-delay:-3.5s"/>
+      <circle class="a-ember" cx="1408" cy="642" r="1.5" style="fill:var(--primary);animation-duration:8.2s;animation-delay:-4.8s"/>
+      <circle class="a-ember" cx="231" cy="509" r="2.3" fill="#FFD2C2" style="animation-duration:9.9s;animation-delay:-6.1s"/>
+      <circle class="a-ember" cx="494" cy="606" r="3.1" style="fill:var(--accent);animation-duration:6.6s;animation-delay:-7.4s"/>
+      <circle class="a-ember" cx="757" cy="473" r="3.9" style="fill:var(--primary);animation-duration:8.3s;animation-delay:-0.7s"/>
+      <circle class="a-ember" cx="1020" cy="570" r="1.5" fill="#FFD2C2" style="animation-duration:10.0s;animation-delay:-2.0s"/>
+      <circle class="a-ember" cx="1283" cy="667" r="2.3" style="fill:var(--accent);animation-duration:6.7s;animation-delay:-3.3s"/>
+    </svg>
+
+    <div class="container hero-inner">
+      <div class="hero-copy a-up">
+        <span class="pill"><span class="pill-dot a-dot"></span>AI fitness &amp; nutrition coach · Android</span>
+        <h1>Your AI fitness coach that <span class="hl">learns from your data.</span></h1>
+        <p class="hero-sub">Workouts, meals, water, steps, sleep and your daily schedule in one place. Vroxx coaches you from what you actually log, and adjusts your targets as you go, not from generic advice.</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-store js-coming-soon">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17l9.2-8.5z" fill="#4F6BF6"/><path d="M4 3.5l12.4 7-3.2 2z" fill="#FF6433"/><path d="M4 20.5l12.4-7-3.2-1.5z" fill="#2B3A8F"/><path d="M16.4 10.5L20 12.5l-3.6 2-3.2-2.5z" fill="#FFB199"/></svg>
+            <span class="store-text"><small>Get it on</small><strong>Google Play</strong></span>
+          </button>
+          <a class="btn btn-outline" href="#how">
+            See how it works
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="checks">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7F95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Steps &amp; sleep via Health Connect</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7F95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Dark &amp; light themes</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7F95FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sign in with Google</span>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="orbit a-spin" viewBox="0 0 460 460">
+          <circle cx="230" cy="230" r="214" fill="none" stroke="#2A3160" stroke-width="1.5" stroke-dasharray="4 10"/>
+          <circle cx="230" cy="16" r="6" style="fill:var(--accent)"/>
+          <circle cx="16" cy="230" r="4" style="fill:var(--primary)"/>
+        </svg>
+
+        <div class="phone a-float">
+          <div class="screen">
+            <div class="notch"></div>
+            <div class="greet">
+              <div class="greet-text"><small>Good afternoon,</small><strong>Akash</strong></div>
+              <div class="streak"><svg width="13" height="13" viewBox="0 0 24 24"><path class="a-flame" d="M12 2c1 4 7 6 7 13a7 7 0 0 1-14 0c0-3.5 2-5.6 3.5-7 .2 2.4 1.2 3.8 2.6 4.2C10.6 9 11 5.5 12 2z" fill="#FF6433"/></svg>12 days</div>
+            </div>
+
+            <div class="grid-2">
+              <div class="tile tile-center">
+                <svg width="84" height="84" viewBox="0 0 84 84">
+                  <circle cx="42" cy="42" r="34" fill="none" stroke="#262C4D" stroke-width="9"/>
+                  <circle class="a-ring" cx="42" cy="42" r="34" fill="none" stroke-width="9" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="59.8" transform="rotate(-90 42 42)" style="stroke:var(--accent)"/>
+                  <text x="42" y="47" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="Manrope, sans-serif">72%</text>
+                </svg>
+                <span class="tile-label">Calories burned</span>
+              </div>
+              <div class="tile tile-center">
+                <svg width="84" height="84" viewBox="0 0 84 84">
+                  <circle cx="42" cy="42" r="34" fill="none" stroke="#262C4D" stroke-width="9"/>
+                  <circle class="a-ring delay" cx="42" cy="42" r="34" fill="none" stroke-width="9" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="89.7" transform="rotate(-90 42 42)" style="stroke:var(--primary)"/>
+                  <text x="42" y="47" text-anchor="middle" font-size="16" font-weight="800" fill="#fff" font-family="Manrope, sans-serif">58%</text>
+                </svg>
+                <span class="tile-label">Water</span>
+              </div>
+            </div>
+
+            <div class="tile">
+              <div class="chart-head">
+                <strong>Net calories</strong>
+                <span class="seg"><span class="on">W</span><span>M</span><span>Y</span></span>
+              </div>
+              <svg width="100%" height="96" viewBox="0 0 240 96" preserveAspectRatio="none">
+                <line x1="0" y1="88" x2="240" y2="88" stroke="#262C4D"/>
+                <rect class="a-bar" x="8" y="26" width="20" height="62" rx="6" style="fill:var(--primary);animation-delay:0.0s"/>
+                <rect class="a-bar" x="41" y="40" width="20" height="48" rx="6" style="fill:var(--primary);animation-delay:0.1s"/>
+                <rect class="a-bar" x="74" y="14" width="20" height="74" rx="6" style="fill:var(--accent);animation-delay:0.2s"/>
+                <rect class="a-bar" x="107" y="48" width="20" height="40" rx="6" style="fill:var(--primary);animation-delay:0.3s"/>
+                <rect class="a-bar" x="140" y="22" width="20" height="66" rx="6" style="fill:var(--primary);animation-delay:0.4s"/>
+                <rect class="a-bar" x="173" y="36" width="20" height="52" rx="6" style="fill:var(--primary);animation-delay:0.5s"/>
+                <rect class="a-bar" x="206" y="58" width="20" height="30" rx="6" style="fill:var(--primary);animation-delay:0.6s"/>
+              </svg>
+              <div class="days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+            </div>
+
+            <div class="grid-2">
+              <div class="tile tile-small">
+                <span class="tile-label">Steps</span>
+                <div class="tile-value">7,482</div>
+                <div class="progress"><span style="width:75%"></span></div>
+              </div>
+              <div class="tile tile-small">
+                <span class="tile-label">Last night</span>
+                <div class="tile-value">7h 12m</div>
+                <svg width="100%" height="10" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 7 Q10 2 20 6 T40 5 T60 8 T80 3 T100 6" fill="none" stroke="#A78BFA" stroke-width="2"/></svg>
+              </div>
+            </div>
+
+            <div class="coach">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#AFC0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>
+              <span>Your bench volume is up this week. Keep rest at 90s on Push day.<span class="caret a-caret">|</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chip chip-left a-float-2">
+          <svg width="28" height="28" viewBox="0 0 28 28"><rect width="28" height="28" rx="8" fill="#2A1712"/><path d="M8 18l4-4 3 3 5-6" fill="none" stroke="#FF8A66" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="chip-text"><small>New PR</small><strong>Deadlift</strong></span>
+        </div>
+        <div class="chip chip-right a-float">
+          <svg width="28" height="28" viewBox="0 0 28 28"><rect width="28" height="28" rx="8" fill="#1C2147"/><path d="M14 7c3 4 5 6 5 9a5 5 0 0 1-10 0c0-3 2-5 5-9z" fill="none" stroke="#AFC0FF" stroke-width="2"/></svg>
+          <span class="chip-text"><small>Hydration</small><strong>+250 ml logged</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM ========== -->
+  <section class="problem section-alt">
+    <div class="container stack">
+      <div class="section-head">
+        <span class="eyebrow">Sound familiar?</span>
+        <h2 class="h2">Most fitness plans fail for the same five reasons.</h2>
+        <p class="lead">Vroxx asks about your biggest obstacle on day one, and builds around it.</p>
+      </div>
+      <div class="obstacles">
+        <div class="obstacle card"><s>Consistency</s><p>Streaks, heatmaps and a streak-at-risk nudge keep you showing up.</p></div>
+        <div class="obstacle card"><s>Unhealthy eating</s><p>Type a meal, get calories and macros, and see your day add up.</p></div>
+        <div class="obstacle card"><s>Lack of support</s><p>An AI coach note written from your own logged sessions.</p></div>
+        <div class="obstacle card"><s>Busy schedule</s><p>Workouts and meals on one timeline with smart reminders.</p></div>
+        <div class="obstacle card"><s>No meal ideas</s><p>AI meal plans built from your targets and what you already eat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section id="features" class="section">
+    <div class="container stack">
+      <div class="section-head">
+        <span class="eyebrow">Everything in one app</span>
+        <h2 class="h2">Train, eat, track and recover, with a coach that reads your logs.</h2>
+      </div>
+
+      <div class="features">
+        <article class="feature card">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke:var(--primary)"><path d="M6.5 6.5v11"/><path d="M17.5 6.5v11"/><path d="M3 9v6"/><path d="M21 9v6"/><path d="M6.5 12h11"/></svg>
+          <h3>AI workout plans</h3>
+          <p>Pick your training days, session length, equipment and rep style, or leave it on Auto. The AI writes a plan and matches every move to a real exercise in the library.</p>
+          <div class="rows feature-foot">
+            <div class="row a-up" style="animation-delay:.1s"><strong>Push</strong><small>Mon · 6:30 PM · 45 min</small></div>
+            <div class="row a-up" style="animation-delay:.3s"><strong>Pull</strong><small>Wed · 6:30 PM · 45 min</small></div>
+            <div class="row a-up" style="animation-delay:.5s"><strong>Leg Day</strong><small>Fri · 7:00 AM · 50 min</small></div>
+          </div>
+        </article>
+
+        <article class="feature card">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke:var(--accent)"><path d="M3 11h18"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M9 7c0-1.5 1-2 1-3.5"/><path d="M13 7c0-1.5 1-2 1-3.5"/></svg>
+          <h3>Log meals by typing</h3>
+          <p>Type what you ate. The AI estimates calories and macros for each item, and your meal and daily totals add up on their own.</p>
+          <div class="meal-box feature-foot">
+            <div class="meal-input">2 rotis, palak paneer, a bowl of dal<span class="caret a-caret">|</span></div>
+            <div class="macros">
+              <div class="macro"><small>Protein</small><div class="track"><div class="fill" style="width:70%;background:var(--primary)"></div></div></div>
+              <div class="macro"><small>Carbs</small><div class="track"><div class="fill" style="width:55%;background:var(--accent);animation-delay:.15s"></div></div></div>
+              <div class="macro"><small>Fat</small><div class="track"><div class="fill" style="width:40%;background:var(--violet);animation-delay:.3s"></div></div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature card">
+          <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path class="a-flame" d="M12 2c1 4 7 6 7 13a7 7 0 0 1-14 0c0-3.5 2-5.6 3.5-7 .2 2.4 1.2 3.8 2.6 4.2C10.6 9 11 5.5 12 2z" fill="none" stroke-width="1.8" stroke-linejoin="round" style="stroke:var(--accent)"/></svg>
+          <h3>Streaks, PRs &amp; milestones</h3>
+          <p>A streak counter, a monthly activity heatmap, and personal records detected automatically, so progress is something you can see.</p>
+          <div class="heatmap feature-foot" aria-hidden="true"><span style="background:rgba(255,100,51,0.25);animation-delay:0.00s"></span><span style="background:rgba(255,100,51,0.75);animation-delay:0.03s"></span><span style="background:#1E2340;animation-delay:0.06s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.09s"></span><span style="background:rgba(255,100,51,0.5);animation-delay:0.12s"></span><span style="background:rgba(255,100,51,0.75);animation-delay:0.15s"></span><span style="background:rgba(255,100,51,0.25);animation-delay:0.18s"></span><span style="background:rgba(255,100,51,0.5);animation-delay:0.21s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.24s"></span><span style="background:rgba(255,100,51,0.75);animation-delay:0.27s"></span><span style="background:#1E2340;animation-delay:0.30s"></span><span style="background:rgba(255,100,51,0.25);animation-delay:0.33s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.36s"></span><span style="background:rgba(255,100,51,0.5);animation-delay:0.39s"></span><span style="background:rgba(255,100,51,0.75);animation-delay:0.42s"></span><span style="background:rgba(255,100,51,0.25);animation-delay:0.45s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.48s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.51s"></span><span style="background:rgba(255,100,51,0.5);animation-delay:0.54s"></span><span style="background:#1E2340;animation-delay:0.57s"></span><span style="background:rgba(255,100,51,0.75);animation-delay:0.60s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.63s"></span><span style="background:rgba(255,100,51,0.5);animation-delay:0.66s"></span><span style="background:rgba(255,100,51,0.25);animation-delay:0.69s"></span><span style="background:rgba(255,100,51,0.75);animation-delay:0.72s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.75s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.78s"></span><span style="background:rgba(255,100,51,0.5);animation-delay:0.81s"></span><span style="background:rgba(255,100,51,0.75);animation-delay:0.84s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.87s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.90s"></span><span style="background:rgba(255,100,51,0.5);animation-delay:0.93s"></span><span style="background:rgba(255,100,51,1);animation-delay:0.96s"></span><span style="background:rgba(255,100,51,0.25);animation-delay:0.99s"></span><span style="background:#1E2340;animation-delay:1.02s"></span></div>
+        </article>
+
+        <article class="feature card">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke:var(--violet)"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+          <h3>Steps &amp; sleep, synced</h3>
+          <p>Steps from your phone's motion sensor and Android Health Connect, plus last night's sleep, sitting right on your dashboard.</p>
+          <svg class="feature-foot" viewBox="0 0 300 90" width="100%" height="90" aria-hidden="true">
+            <path class="a-draw" pathLength="1" d="M0 70 C30 70 40 30 70 32 S110 64 140 50 S190 10 220 22 S270 60 300 40" fill="none" stroke="#A78BFA" stroke-width="3" stroke-linecap="round"/>
+            <path class="a-draw delay" pathLength="1" d="M0 80 C40 76 60 58 100 60 S160 74 200 52 S260 34 300 30" fill="none" stroke-width="3" stroke-linecap="round" style="stroke:var(--primary)"/>
+          </svg>
+        </article>
+
+        <article class="feature card">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke:var(--primary)"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></svg>
+          <h3>This week vs last week</h3>
+          <p>Every metric shows its change, coloured by whether it's good news for your goal, not just whether it went up.</p>
+          <div class="rows feature-foot">
+            <div class="row row-delta"><span>Avg. steps</span><span class="up-good">▲ 12%</span></div>
+            <div class="row row-delta"><span>Water</span><span class="up-good">▲ 8%</span></div>
+            <div class="row row-delta"><span>Net calories</span><span class="up-bad">▲ 5%</span></div>
+          </div>
+        </article>
+
+        <article class="feature card">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke:var(--accent)"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
+          <h3>One schedule for all of it</h3>
+          <p>Planned workouts and meals on one calendar and timeline, with a week strip and what's coming up next.</p>
+          <div class="week feature-foot" aria-hidden="true"><div><span>M</span><i style="background:#AFC0FF"></i></div><div><span>T</span><i style="background:var(--accent)"></i></div><div><span>W</span><i style="background:#AFC0FF"></i></div><div class="today"><span>T</span><i style="background:var(--accent)"></i></div><div><span>F</span><i style="background:#AFC0FF"></i></div><div><span>S</span><i style="background:var(--accent)"></i></div><div><span>S</span><i style="background:transparent"></i></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SMART TARGETS ========== -->
+  <section id="targets" class="section section-alt">
+    <div class="container split">
+      <div class="split-copy">
+        <span class="eyebrow">Smart targets</span>
+        <h2 class="h2">Your plan adjusts when your body doesn't follow the script.</h2>
+        <p class="lead">Once you have five or more weigh-ins in 14 days and most meals logged, Vroxx compares your real weight trend to the pace you chose. If they drift apart, it suggests a new calorie target.</p>
+        <p class="strong">You accept or dismiss it. Vroxx never changes your target without asking.</p>
+      </div>
+      <div class="target-card">
+        <div class="legend">
+          <strong>Weight trend · last 14 days</strong>
+          <span class="legend-keys">
+            <span><svg width="18" height="4" aria-hidden="true"><line x1="0" y1="2" x2="18" y2="2" stroke="#6E779C" stroke-width="2" stroke-dasharray="4 3"/></svg>Planned pace</span>
+            <span><svg width="18" height="4" aria-hidden="true"><line x1="0" y1="2" x2="18" y2="2" stroke="#FF6433" stroke-width="3"/></svg>Your trend</span>
+          </span>
+        </div>
+        <svg viewBox="0 0 520 220" width="100%" role="img" aria-label="Chart: actual weight trend is flatter than the planned pace">
+          <line x1="20" y1="200" x2="500" y2="200" stroke="#262C4D"/>
+          <line x1="20" y1="140" x2="500" y2="140" stroke="#1C2140"/>
+          <line x1="20" y1="80" x2="500" y2="80" stroke="#1C2140"/>
+          <path d="M20 40 L500 176" fill="none" stroke="#6E779C" stroke-width="2" stroke-dasharray="6 6"/>
+          <path class="a-draw" pathLength="1" d="M20 40 C80 52 120 44 170 62 S260 70 310 84 S420 96 500 112" fill="none" stroke-width="4" stroke-linecap="round" style="stroke:var(--accent)"/>
+          <circle cx="20" cy="40" r="5" fill="#0E1122" stroke-width="2.5" style="stroke:var(--accent)"/><circle cx="90" cy="50" r="5" fill="#0E1122" stroke-width="2.5" style="stroke:var(--accent)"/><circle cx="160" cy="58" r="5" fill="#0E1122" stroke-width="2.5" style="stroke:var(--accent)"/><circle cx="230" cy="66" r="5" fill="#0E1122" stroke-width="2.5" style="stroke:var(--accent)"/><circle cx="310" cy="84" r="5" fill="#0E1122" stroke-width="2.5" style="stroke:var(--accent)"/><circle cx="400" cy="94" r="5" fill="#0E1122" stroke-width="2.5" style="stroke:var(--accent)"/><circle cx="500" cy="112" r="5" fill="#0E1122" stroke-width="2.5" style="stroke:var(--accent)"/>
+          <path d="M500 112 L500 176" stroke="#FFD2C2" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text x="490" y="150" text-anchor="end" font-size="13" fill="#FFD2C2" font-family="Manrope, sans-serif">gap</text>
+        </svg>
+
+        <div class="suggest" aria-live="polite">
+          <div class="suggest-msg">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#AFC0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/></svg>
+            <span>You're losing slower than your Steady pace. Want to lower your daily target to <strong>1,850 kcal</strong>?</span>
+          </div>
+          <div class="suggest-actions" id="suggestActions">
+            <button type="button" class="btn btn-accent" data-target-choice="accepted">Accept</button>
+            <button type="button" class="btn btn-ghost" data-target-choice="dismissed">Dismiss</button>
+          </div>
+          <div class="suggest-result a-up" id="suggestResult" hidden>
+            <strong id="suggestText"></strong>
+            <button type="button" id="suggestReset">Try again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section id="how" class="section">
+    <div class="container stack">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2 class="h2">Six questions in. A plan that keeps learning out.</h2>
+      </div>
+      <div class="steps-wrap">
+        <svg class="steps-line" aria-hidden="true" viewBox="0 0 1200 20" preserveAspectRatio="none">
+          <path class="a-pulse" pathLength="1" d="M40 10 H1160" fill="none" stroke-width="2" stroke-linecap="round" style="stroke:var(--primary)"/>
+        </svg>
+        <div class="steps">
+          <div class="step a-up"><span class="step-num">1</span><h3>Answer 6 questions</h3><p>Your body metrics, goal, pace, how often you train and your biggest obstacle.</p></div>
+          <div class="step a-up"><span class="step-num">2</span><h3>Get your targets</h3><p>Vroxx calculates your BMR and shows your calorie and macro targets.</p></div>
+          <div class="step a-up"><span class="step-num">3</span><h3>Train, eat, log</h3><p>Follow AI workout and meal plans. Log sets, meals, water and weigh-ins.</p></div>
+          <div class="step a-up"><span class="step-num">4</span><h3>Vroxx adjusts</h3><p>Coaching notes and target suggestions come from your own data.</p></div>
+        </div>
+      </div>
+      <div class="goals"><span>Lose weight</span><span>Lose fat &amp; lean out</span><span>Gain weight</span><span>Boost endurance</span><span>Maintain &amp; general health</span></div>
+    </div>
+  </section>
+
+  <!-- ========== REMINDERS ========== -->
+  <section id="reminders" class="section section-alt reminders">
+    <div class="container split">
+      <div class="split-copy">
+        <span class="eyebrow">Smart reminders</span>
+        <h2 class="h2">Nudges that check before they nag.</h2>
+        <p class="lead">Reminders look at what you've already logged. Already ate lunch? No meal ping. Way behind on water by the afternoon? A gentle nudge. Every one can be switched on or off.</p>
+        <svg viewBox="0 0 200 200" width="180" height="180" aria-hidden="true">
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#232A4D" stroke-width="2"/>
+          <circle class="a-dot" cx="100" cy="100" r="58" fill="none" stroke-width="2" stroke-dasharray="3 7" style="stroke:var(--primary)"/>
+          <path d="M100 58c-14 0-24 10-24 24v18l-8 12h64l-8-12V82c0-14-10-24-24-24z" fill="#141829" stroke="#E8EBF7" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M90 120a10 10 0 0 0 20 0" fill="none" stroke="#E8EBF7" stroke-width="3"/>
+          <circle class="a-dot" cx="124" cy="66" r="9" style="fill:var(--accent)"/>
+        </svg>
+      </div>
+      <div class="reminder-list">
+        <div class="reminder">
+          <span class="reminder-when">Planned</span>
+          <span class="reminder-text"><strong>Workout reminders</strong><small>Right before each scheduled session.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Workout reminders"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+        <div class="reminder">
+          <span class="reminder-when">Mealtimes</span>
+          <span class="reminder-text"><strong>Meal reminders</strong><small>Only if you haven’t logged that meal yet.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Meal reminders"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+        <div class="reminder">
+          <span class="reminder-when">Afternoon</span>
+          <span class="reminder-text"><strong>Hydration nudge</strong><small>When you’re well behind on your water goal.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Hydration nudge"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+        <div class="reminder">
+          <span class="reminder-when">Same day</span>
+          <span class="reminder-text"><strong>Missed-workout nudge</strong><small>A quiet heads-up when a session slips.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Missed-workout nudge"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+        <div class="reminder">
+          <span class="reminder-when">7:00 PM</span>
+          <span class="reminder-text"><strong>Streak at risk</strong><small>When a 3+ day streak would break tonight.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Streak at risk"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+        <div class="reminder">
+          <span class="reminder-when">7:30 PM</span>
+          <span class="reminder-text"><strong>Protein goal</strong><small>When you’re under 90% of your target.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Protein goal"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+        <div class="reminder">
+          <span class="reminder-when">6:00 PM</span>
+          <span class="reminder-text"><strong>Low activity</strong><small>When steps are under 40% of your goal.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Low activity"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+        <div class="reminder">
+          <span class="reminder-when">Sun 7 PM</span>
+          <span class="reminder-text"><strong>Weekly summary</strong><small>Your real numbers from the week.</small></span>
+          <button type="button" class="toggle" aria-pressed="true" aria-label="Weekly summary"><span class="toggle-track"><span class="toggle-knob"></span></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINAL CTA ========== -->
+  <section id="get" class="cta-section">
+    <div class="cta-card">
+      <svg class="cta-line" aria-hidden="true" viewBox="0 0 1000 120" preserveAspectRatio="none">
+        <path class="a-pulse" pathLength="1" d="M0 80 H380 L400 80 L415 40 L435 110 L455 20 L475 95 L490 80 H1000" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--accent)"/>
+      </svg>
+      <svg width="64" height="64" viewBox="0 0 34 34" aria-hidden="true">
+          <rect width="34" height="34" rx="10" fill="#0E1122"/>
+          <path class="a-flame" d="M17 6c1 4 6 6.5 6 12.5a6 6 0 0 1-12 0c0-3 1.6-4.8 3-6 .2 2 1 3.2 2.2 3.6C15.6 12.5 16 9 17 6z" style="fill:var(--accent)"/>
+          <path d="M17 18c.6 1.6 2.6 2.4 2.6 4.4a2.6 2.6 0 0 1-5.2 0c0-1.4 1.4-2.6 2.6-4.4z" fill="#FFD2C2"/>
+        </svg>
+      <h2>Start your streak today.</h2>
+      <p class="lead">Answer six questions, get your calorie and macro targets, and let Vroxx coach you from your own data.</p>
+      <button type="button" class="btn btn-accent btn-cta js-coming-soon">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17l9.2-8.5z" fill="#14080A"/><path d="M4 3.5l12.4 7-3.2 2z" fill="#14080A" opacity=".75"/><path d="M4 20.5l12.4-7-3.2-1.5z" fill="#14080A" opacity=".75"/><path d="M16.4 10.5L20 12.5l-3.6 2-3.2-2.5z" fill="#14080A" opacity=".55"/></svg>
+        <span class="store-text"><small>Download for Android</small><strong>Get it on Google Play</strong></span>
+      </button>
+      <span class="cta-note">Coming soon · Android</span>
+    </div>
+  </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-brand">Vroxx</span>
+      <span class="footer-links">
+        <a href="#privacy">Privacy policy</a>
+        <a href="#terms">Terms</a>
+        <a href="mailto:hello@example.com">[YOUR CONTACT EMAIL]</a>
+      </span>
+      <span>© 2026 Vroxx</span>
+    </div>
+  </footer>
+
+  <!-- ========== COMING SOON POPUP ========== -->
+  <div class="modal" id="soonModal" hidden>
+    <button type="button" class="modal-backdrop" data-close-modal aria-label="Close popup" tabindex="-1"></button>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="soonTitle">
+      <button type="button" class="modal-close" data-close-modal aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+      </button>
+      <svg width="200" height="160" viewBox="0 0 200 160" aria-hidden="true">
+        <g class="a-orbit">
+          <circle cx="100" cy="80" r="66" fill="none" stroke="#2A3160" stroke-width="1.5" stroke-dasharray="4 8"/>
+          <circle cx="100" cy="14" r="5" style="fill:var(--accent)"/>
+          <circle cx="166" cy="80" r="3.5" style="fill:var(--primary)"/>
+          <circle cx="34" cy="80" r="3" fill="#A78BFA"/>
+        </g>
+        <rect x="70" y="26" width="60" height="108" rx="14" fill="#0E1122" stroke="#2E3561" stroke-width="2"/>
+        <rect x="90" y="32" width="20" height="5" rx="2.5" fill="#1E2340"/>
+        <path class="a-flame" d="M100 50c1.8 7.2 10.8 11.7 10.8 22.5a10.8 10.8 0 0 1-21.6 0c0-5.4 2.9-8.6 5.4-10.8.4 3.6 1.8 5.8 4 6.5C97.5 61.7 98.2 55.4 100 50z" style="fill:var(--accent)"/>
+        <path d="M100 71.6c1.1 2.9 4.7 4.3 4.7 7.9a4.7 4.7 0 0 1-9.4 0c0-2.5 2.5-4.7 4.7-7.9z" fill="#FFD2C2"/>
+        <rect x="82" y="106" width="36" height="6" rx="3" fill="#1E2340"/>
+        <rect class="a-load" x="82" y="106" width="36" height="6" rx="3" style="fill:var(--primary)"/>
+        <circle cx="132" cy="34" r="14" fill="#1C2147" stroke="#4F6BF6" stroke-width="2"/>
+        <rect class="a-hand" x="131" y="25" width="2" height="9" rx="1" fill="#fff"/>
+        <rect x="131" y="33" width="7" height="2" rx="1" fill="#AFC0FF"/>
+        <path class="a-dot" d="M40 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#FFD2C2"/>
+        <path class="a-dot" d="M162 122l1.6 4 4 1.6-4 1.6-1.6 4-1.6-4-4-1.6 4-1.6z" fill="#AFC0FF" style="animation-delay:.7s"/>
+      </svg>
+      <span class="modal-tag">Coming soon</span>
+      <h3 id="soonTitle">Vroxx is almost on Google Play</h3>
+      <p>We're putting the final touches on the Android app. Check back soon to download it.</p>
+      <button type="button" class="btn btn-accent" data-close-modal>Got it</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
